@@ -1,0 +1,312 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.navContainer {
+  max-width: 1200px;
+  height: 70px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logoLink {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.5px;
+  font-family: 'Playfair Display', serif;
+}
+
+.logoHighlight {
+  color: rgba(139, 90, 43, 0.8);
+}
+
+.logoDark {
+  color: #1E1E1E;
+}
+
+.desktopMenu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.menuItem {
+  padding: 8px 16px;
+  font-size: 15px;
+  color: #555555;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.menuItem:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: #8B5A2B;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.menuItem:hover {
+  color: #8B5A2B;
+}
+
+.menuItem:hover:after {
+  width: 60%;
+}
+
+.activeMenuItem {
+  color: #8B5A2B;
+  font-weight: 600;
+}
+
+.activeMenuItem:after {
+  width: 60%;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.searchContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  height: 40px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  border-bottom: 1px solid #eee;
+}
+
+.searchInput {
+  width: 100%;
+  height: 100%;
+  padding: 0 40px 0 12px;
+  border: none;
+  font-size: 14px;
+  background-color: transparent;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.searchInput:focus {
+  border-color: #8B5A2B;
+}
+
+.actionLink {
+  color: inherit;
+  text-decoration: none;
+}
+
+.actionButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.actionButton:hover {
+  background: rgba(139, 90, 43, 0.08);
+}
+
+.icon {
+  font-size: 18px;
+  color: #555555;
+  transition: color 0.2s ease;
+}
+
+.actionButton:hover .icon {
+  color: #8B5A2B;
+}
+
+.badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: #8B5A2B;
+  color: #fff;
+  font-size: 10px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  border: 2px solid #fff;
+}
+
+.mobileMenuButton {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 1001;
+}
+
+.mobileMenuButton:hover {
+  background: rgba(233, 78, 53, 0.08);
+}
+
+.mobileMenuContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 280px;
+  background-color: #ffffff;
+  z-index: 1000;
+  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  overflow: auto;
+  padding-top: 80px;
+  transform: translateX(-100%);
+}
+
+.mobileMenuOpen {
+  transform: translateX(0);
+}
+
+.mobileMenuContent {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.mobileMenuItem {
+  padding: 16px;
+  font-size: 16px;
+  color: #555555;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 0;
+  margin-bottom: 8px;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.mobileMenuItem:hover {
+  color: #8B5A2B;
+  background-color: rgba(233, 78, 53, 0.04);
+}
+
+.activeMobileMenuItem {
+  color: #8B5A2B;
+  font-weight: 600;
+  border-left: 3px solid#8B5A2B;
+  padding-left: 13px;
+}
+
+.mobileSearchContainer {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  position: relative;
+  border: 1px solid #eee;
+  border-radius: 30px;
+  padding: 5px;
+}
+
+.mobileSearchInput {
+  width: 100%;
+  padding: 10px 40px 10px 16px;
+  border: none;
+  font-size: 14px;
+  background-color: transparent;
+  outline: none;
+}
+
+.mobileSearchButton {
+  position: absolute;
+  right: 8px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  height: 40px;
+  width: 40px;
+}
+
+.searchIcon {
+  font-size: 16px;
+  color: #8B5A2B;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+@media (max-width: 768px) {
+  .desktopMenu {
+    display: none;
+  }
+  
+  .mobileMenuButton {
+    display: flex;
+  }
+  
+  .actions {
+    gap: 8px;
+  }
+  
+  .searchContainer {
+    width: 40px;
+  }
+  
+  .searchContainer.open {
+    width: 160px;
+  }
+}

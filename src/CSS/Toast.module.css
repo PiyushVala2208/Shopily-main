@@ -1,0 +1,94 @@
+.toastContainer {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.toast {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-width: 250px;
+  max-width: 450px;
+  background-color: white;
+  color: #333;
+  padding: 12px 16px;
+  border-radius: 5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.toast.success {
+  border-left: 4px solid #4CAF50;
+}
+
+.toast.error {
+  border-left: 4px solid #F44336;
+}
+
+.toast.info {
+  border-left: 4px solid #2196F3;
+}
+
+.toast.warning {
+  border-left: 4px solid #FF9800;
+}
+
+.icon {
+  margin-right: 12px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.success .icon {
+  color: #4CAF50;
+}
+
+.error .icon {
+  color: #F44336;
+}
+
+.info .icon {
+  color: #2196F3;
+}
+
+.warning .icon {
+  color: #FF9800;
+}
+
+.message {
+  flex: 1;
+  font-size: 14px;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  color: #aaa;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 10px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.closeButton:hover {
+  color: #333;
+} 
